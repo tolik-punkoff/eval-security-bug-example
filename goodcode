@@ -1,0 +1,15 @@
+#!/bin/bash
+
+IFS_=$IFS
+IFS=$'\n'
+for TMPSTRING in $(cat "testfile.txt")
+do
+    eval $(echo "$TMPSTRING"|awk -F "," '{print "LOGIN=" sq $1 sq; 
+    print "FULLNAME=" sq $2 sq; print "PHONE=" sq $3 sq; print"ROOM=" sq $4 sq;
+    print "WORKTIME=" sq $5 sq}' sq="'")
+    
+    echo -e "Login \t Full name \t Phone \t Room \t Work time"
+    echo -e "$LOGIN \t $FULLNAME \t $PHONE \t $ROOM \t $WORKTIME"    
+
+done
+IFS=$IFS_

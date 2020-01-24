@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Script for create test dir and files
+
+mkdir -p "./testdir/tdl1/tdl2/tdl3"
+mkdir -p "./testdir/tdl12/tdl22/tdl32"
+mkdir -p "./testdir/tdl14/tdl25/tdl35"
+
+touch "./testdir/tdl1/tdl2/tdl3/file1"
+touch "./testdir/tdl12/tdl22/tdl32/file2"
+touch "./testdir/tdl14/tdl25/tdl35/file3"
+
+touch "./testdir/tdl1/tdl2/file1"
+touch "./testdir/tdl12/tdl22/file2"
+touch "./testdir/tdl14/tdl25/file3"
+
+touch "./testdir/tdl1/file1"
+touch "./testdir/tdl12/file2"
+touch "./testdir/tdl14/file3"
+
+touch "./testdir/file1"
+touch "./testdir/file2"
+touch "./testdir/file3"
