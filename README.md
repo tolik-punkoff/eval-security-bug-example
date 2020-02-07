@@ -3,35 +3,50 @@ The example shows the danger of using the eval in bash. There is an example of d
 
 ## English
 
-Using:
+Files:
 
-1. Download all files an put in test directory
+maketestdir - script for create test directories
 
-2. Make test directory use 'maketestdir' script
+testfile.txt - Test file. Danger fixed if you use single quotes in you code.
 
-3. Test bug use 'wrongcode' script
+testfile2.txt - Test file. Danger fixed if you delete in code single quotes from input string and use single quotes in you code.
 
-4. Go 2 pt
+wrongcode - Script with no fix (using double quotes in code)
 
-5. Test fix, use 'goodcode'
+wrongcode - Script with first fix (using single quotes in code)
 
-6. Compare the results of execution and output to the console.
+goodcode - Final fix. Code remove single quotes from input string and use single quotes in code
+
+Using scripts:
+
+script_name test_file
+
+e.q.
+
+wrongcode testfile2.txt
+
 
 
 ## Русский язык
 
 Пример показывает опасность использования eval в bash. Имеется пример опасного и безопасного кода.
 
-Использование:
+Файлы:
 
-1. Положите файлы в отдельный подкаталог.
+maketestdir - скрипт для создания тестовых каталогов.
 
-2. Выполните скрипт maketestdir.
+testfile.txt - Тестовый файл. Ошибку безопасности можно обойти, заменив двойные кавычки одинарными в коде.
 
-3. Выполните скрипт wrongcode: каталог ./testdir со всеми подкаталогами и файлами исчезнет.
+testfile2.txt - Замена двойных кавычек одинарными не поможет. Необходимо дополнительно удалять одинарные кавычки во входной строке.
 
-4. Првторите пункт 2.
+wrongcode - файл без исправлений кода (в коде используются двойные кавычки)
 
-5. Выполните скрипт goodcode: каталог ./testdir со всеми подкаталогами и файлами остается.
+wrongcode2 - только первое исправление (в коде используются одинарные кавычки)
 
-6. Сравните код скриптов, результаты работы и вывод на экран.
+goodcode - окончательно исправленный код (удаляются одинарные кавычки из входных строк).
+
+Вызов скриптов: <скрипт> <тестовый файл>
+
+Например:
+
+wrongcode testfile2.txt
